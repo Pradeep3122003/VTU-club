@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Homes</title>
     <style>
         @media screen and (max-width: 721px){
             @media screen and (max-height: 1600px)  {
         .bar {
-            background-color: rgb(12, 126, 255);
-            height:7vh;
-            width: 100vw;
+            background-image: linear-gradient(30deg,black,black,rgb(8, 41, 255),rgb(216, 255, 192));
+            height:calc(5vh + 5vw);
+            width: calc(5vh + 5vw);
+            border-radius: 40%;
             align-items: center;
-            display: flex;
+            display: ;
             position: absolute;
-            margin: 95vh 0vw;
+            margin: 0vh 0vw;
+            animation: bar 3s ease 1;
+            cursor: move;
+        }
+
+         #mydiv{
+            position: absolute;
+         }
+
+        @keyframes bar {
+            from{
+               rotate: 0deg;
+          
+            }
+            
+            to{
+                rotate: 360deg;
+           
+            }
+
         }
 
         .a1 {
@@ -23,10 +43,21 @@
             width: calc(3vh + 3vw);
             border-radius: 50%;
             position: relative;
-            display: inline-block;
+            display: block;
             align-items: center;
-            margin: 0 auto;
+            margin: 3vh auto;
             padding: 5px;
+            visibility: hidden;
+        }
+
+        .bar:hover
+        {
+            height: auto;
+            width: 20vw;
+            border-radius: 0%;
+            .a1{
+                visibility: visible;
+            }
         }
 
         .a1:hover{
@@ -68,17 +99,59 @@
     }}
     </style>
 </head>
-<body>
-    <div class="bar">
-        <a href="set.html" class="a1" id="set"></a>
-        <a href="book.html" class="a1" id="book"></a>
+<body >
+    <div id="mydiv">
+    <div class="bar" id="mydivheader">
         <a href="index.html" class="a1" id="home"></a>
+        <a href="book.html" class="a1" id="book"></a>
         <a href="eve.html" class="a1" id="cup"></a>
         <a href="contact.html" class="a1" id="con"></a>
-    </div>
+        <a href="set.html" class="a1" id="set"></a>
+    </div></div>
 
     <script>
-        
+        dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
     </script>
 </body>
 </html>
