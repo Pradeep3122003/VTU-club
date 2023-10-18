@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homes</title>
+    <style>
+        @media screen and (max-width: 721px){
+            @media screen and (max-height: 1600px)  {
+        .bar {
+            background-image: linear-gradient(30deg,black,black,rgb(8, 41, 255),rgb(216, 255, 192));
+            height:calc(5vh + 5vw);
+            width: calc(5vh + 5vw);
+            border-radius: 40%;
+            align-items: center;
+            display:;
+            position: absolute;
+            margin: 0vh 0vw;
+            animation: bar 3s ease 1;
+            cursor: move;
+        }
+
+      
+        @keyframes bar {
+            from{
+              
+          
+            }
+            
+            to{
+            
+           
+            }
+        }
+
+        
+
+        .a1 {
+            background-color: rgb(255, 255, 255);
+            height: calc(3vh + 3vw);
+            width: calc(3vh + 3vw);
+            border-radius: 50%;
+            position: relative;
+            display:none ;
+            align-items: center;
+            margin: 3vh auto;
+            padding: 5px;
+          
+            
+        }
+
+        .bar:hover
+        {
+            height: auto;
+            width:30vw;
+       
+            border-radius: 10%;
+            .a1{
+                display: block;
+               
+            }
+        }
+
+        .a1:hover{
+            scale: 1.2;
+        }
+
+
+        #home{
+            background-image: url("home.png");
+            background-size: contain;
+         
+            background-position: center;
+           background-color: yellow;
+           scale: 1.2;
+        }
+        
+        #book{
+            background-image: url("book.png");
+            background-size: contain;
+            background-position: center;
+        }
+        
+        #cup{
+            background-image: url("cup.png");
+            background-size: contain;
+            background-position: center;
+        }
+        
+        #con{
+            background-image: url("contact.png");
+            background-size: contain;
+            background-position: center;
+        }
+        
+        #set{
+            background-image: url("set.png");
+            background-size: contain;
+            background-position: center;
+        }
+
+    }}
+    </style>
+</head>
+<body >
+    
+    <div class="bar" id="my">
+        <div class="a1" id="log"></div>
+        <a href="index.html" class="a1" id="home"></a>
+        <a href="book.html" class="a1" id="book"></a>
+        <a href="eve.html" class="a1" id="cup"></a>
+        <a href="contact.html" class="a1" id="con"></a>
+        <a href="set.html" class="a1" id="set"></a>
+    </div>
+
+  <script>
+    let bar = document.getElementById("my");
+    let a1 = document.getElementById("home"); 
+    let a2 = document.getElementById("book"); 
+    let a3 = document.getElementById("cup"); 
+    let a4 = document.getElementById("con"); 
+    let a5 = document.getElementById("set"); 
+
+    
+  </script>
+</body>
+</html>
