@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <style>
+        @media screen and (max-width: 721px){
+            @media screen and (max-height: 1600px)  {
+                body{
+                     background-color: #62ffd5;
+                     user-select: none;
+                }
+        .bar {
+            background-image: linear-gradient(30deg,black,black,rgb(8, 41, 255),rgb(216, 255, 192));
+            height:calc(5vh + 5vw);
+            width: calc(5vh + 5vw);
+            border-radius: 40%;
+            align-items: center;
+            display:;
+            position: absolute;
+            margin: 0vh 0vw;
+            animation: bar 3s ease 1;
+            cursor: move;
+            z-index: 1;
+        }
+
+
+        
+
+        .a1 {
+            background-color: rgb(255, 255, 255);
+            height: calc(3vh + 3vw);
+            width: calc(3vh + 3vw);
+            border-radius: 50%;
+            position: relative;
+            display:block ;
+            align-items: center;
+            margin: 3vh auto;
+            padding: 5px;
+            visibility: hidden;
+        }
+
+        .bar:hover
+        {
+            height: auto;
+            width:30vw;
+            border-radius: 10%;
+            .a1{
+                visibility: visible;
+            }
+        }
+
+        .a1:hover{
+            scale: 1.2;
+        }
+
+        #home{
+            background-image: url("home.png");
+            background-size: contain;
+            background-position: center;
+          
+        }
+        
+        #book{
+            background-image: url("book.png");
+            background-size: contain;
+            background-position: center;
+            background-color: yellow;
+            scale: 1.2;
+        }
+        
+        #cup{
+            background-image: url("cup.png");
+            background-size: contain;
+            background-position: center;
+        }
+        
+        #con{
+            background-image: url("contact.png");
+            background-size: contain;
+            background-position: center;
+        }
+        
+        #set{
+            background-image: url("set.png");
+            background-size: contain;
+            background-position: center;
+        }
+
+    .h{
+        margin: auto;
+        width: auto;
+        height: 6vh;
+        
+        background-color:#e2e51f;
+       
+       font-family: 'Courier New', Courier, monospace;
+       font-weight: 900;
+        font-size: 100px;
+        color: transparent;
+        background-image: url("zebra.jpg");
+        
+        -webkit-background-clip: text;
+        animation: note 10s  infinite ease;
+    }
+
+    @keyframes note {
+        0%{
+           background-position: 0%;
+        }
+        100%
+        {
+           background-position: 100%;
+        }
+    }
+  
+
+
+ ul ul li a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+   ul ul li{
+    height: auto;
+    width: 30vw;
+    border-radius: 10%;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin: 0.2vh auto;
+    background-color: black;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    }
+    #branch{
+        position: absolute;
+        margin: 10vh 20vw;
+        
+    }
+  ul ul
+    {
+        display: block;
+        visibility: collapse;
+        position: absolute;
+    }
+    p
+    {
+        width: 45vw;
+        height:auto;
+       color: #ffffff;
+       font-family: cursive;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        background-color: rgb(40, 42, 43);
+        text-align: center;
+    }
+  ul p:hover{
+    background-image: linear-gradient(70deg,rgb(101, 101, 217),rgb(0, 0, 0));
+  }
+    ul{
+        list-style-type: none;
+        font-size: 50px;
+    }
+
+}}
+    </style>
+</head>
+<body id="mot">
+  
+    
+    <div class="bar" id="mydivheader">
+        <div class="a1" id="log"></div>
+        <a href="index.html" class="a1" id="home"></a>
+        <a href="book.html" class="a1" id="book"></a>
+        <a href="eve.html" class="a1" id="cup"></a>
+        <a href="contact.html" class="a1" id="con"></a>
+        <a href="set.html" class="a1" id="set"></a>
+    </div>
+    <p class="h">Notes</p>
+<ul id="branch"> <p id="c">CS</p>
+    <ul id="cs">
+        <li><a href="#">Sem 1</a></li>
+        <li><a href="#">Sem 2</a></li>
+        <li><a href="#">Sem 3</a></li>
+        <li><a href="#">Sem 4</a></li>
+        <li><a href="#">Sem 5</a></li>
+        <li><a href="#">Sem 6</a></li>
+        <li><a href="#">Sem 7</a></li>
+        <li><a href="#">Sem 8</a></li>
+    </ul>
+    <p id="m">ME</p>
+    <ul id="me">
+        <li><a href="#">Sem 1</a></li>
+        <li><a href="#">Sem 2</a></li>
+        <li><a href="#">Sem 3</a></li>
+        <li><a href="#">Sem 4</a></li>
+        <li><a href="#">Sem 5</a></li>
+        <li><a href="#">Sem 6</a></li>
+        <li><a href="#">Sem 7</a></li>
+        <li><a href="#">Sem 8</a></li>
+    </ul>
+    <p id="e">ECE</p>
+    <ul id="ece">
+        <li><a href="#">Sem 1</a></li>
+        <li><a href="#">Sem 2</a></li>
+        <li><a href="#">Sem 3</a></li>
+        <li><a href="#">Sem 4</a></li>
+        <li><a href="#">Sem 5</a></li>
+        <li><a href="#">Sem 6</a></li>
+        <li><a href="#">Sem 7</a></li>
+        <li><a href="#">Sem 8</a></li>
+    </ul>
+</ul>
+  <script>
+    let c = document.getElementById("c");
+    let e = document.getElementById("e");
+    let m = document.getElementById("m");
+    let cs = document.getElementById("cs");
+    let me = document.getElementById("me");
+    let ece = document.getElementById("ece");
+  
+    var valc=0;
+    var vale=0;
+    var valm=0;
+    c.onclick = function tada ()
+    { if(valc==0)
+        {
+        cs.style.visibility= "visible";
+        cs.style.position= "relative";
+        valc=1;
+        }
+        else
+        {
+            cs.style.visibility= "collapse";
+            cs.style.position= "absolute"; 
+            valc=0;
+        }
+
+    }
+
+    e.onclick = function tada ()
+    {  if(vale==0)
+        {
+        ece.style.visibility= "visible";
+        ece.style.position= "relative";
+        vale=1;
+       }
+       else{
+        ece.style.visibility= "collapse";
+        ece.style.position= "absolute";
+        vale=0;
+       }
+
+    }
+
+    m.onclick = function tada ()
+    {  if(valm==0)
+        {
+        me.style.visibility= "visible";
+        me.style.position= "relative";
+        valm=1;
+        }
+        else{
+            me.style.visibility= "collapse";
+        me.style.position= "absolute";
+        valm=0;
+        }
+    }
+    
+    
+  </script>
+</body>
+</html>
